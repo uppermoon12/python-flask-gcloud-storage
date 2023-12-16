@@ -1,0 +1,5 @@
+gunicorn
+Flask
+google-cloud-storage
+python-dotenv
+google-auth
