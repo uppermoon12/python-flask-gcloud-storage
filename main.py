@@ -22,8 +22,8 @@ def connect():
     bucket = client.bucket('skillshift-bucket')
 
     base_images_dir = 'photos/freelancers/freelancer_blabla123ganteng/base_images/'
-    base_images = bucket.list_blobs(prefix=base_images_dir)
-    return jsonify([base_image.name for base_image in base_images])
+    base_images = bucket.blob(base_images_dir)
+    return jsonify({"message": base_images})
 
 
 if __name__ == "__main__":
